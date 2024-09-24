@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:untitled1/home.dart';
 
 void main() {
@@ -13,6 +14,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   @override
@@ -20,11 +22,9 @@ class MyApp extends StatelessWidget {
 
     int i = 0;
 
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home()
+      home: const Home()
     );
   }
-
-
 }
