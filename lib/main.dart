@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:untitled1/home.dart';
+import 'package:untitled1/pages/home.dart';
+import 'package:untitled1/pages/stack_example.dart';
+import 'package:untitled1/pages/test.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
+        statusBarColor: Colors.blue,
       // Set your desired color here
     ),
   );
@@ -22,9 +24,9 @@ class MyApp extends StatelessWidget {
 
     int i = 0;
 
-    return GetMaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const Home()
+      home: StackExample()
     );
   }
 }
