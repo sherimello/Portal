@@ -7,76 +7,76 @@ class Test extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RxInt i = 0.obs;
 
     return Scaffold(
       backgroundColor: Colors.grey,
-      body: SafeArea(
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
         child: Center(
-            child: Column(
-              children: [
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      WidgetSpan(
-                        child: Icon(CupertinoIcons.cart, color: Colors.white,),
-                        alignment: PlaceholderAlignment.middle
-                      ),
-                      TextSpan(
-                        text: "  items in cart",
-                        style: TextStyle(
-                          height: 0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w900,
-                          fontSize: 17
-                        )
-                      )
-                    ]
-                  )
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 11.0),
-                  child: Text.rich(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text.rich(
+                TextSpan(
+                  children: [
+                    WidgetSpan(child: Icon(CupertinoIcons.cart, color: Colors.white,),
+                    alignment: PlaceholderAlignment.middle
+                    ),
                     TextSpan(
-                      children: [
-                        WidgetSpan(
-                          child: Icon(Icons.history_toggle_off, color: Colors.white,),
-                          alignment: PlaceholderAlignment.middle
-                        ),
-                        TextSpan(
-                          text: "  purchase history",
-                          style: TextStyle(
-                            height: 0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w900,
-                            fontSize: 17
-                          )
-                        )
-                      ]
+                      text: "  items in cart",
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900
+                      )
+
                     )
-                  ),
-                ),
-                Text.rich(
+                  ]
+                )
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 11.0),
+                child: Text.rich(
                   TextSpan(
                     children: [
-                      WidgetSpan(
-                        child: Image.asset("assets/images/settings.png", width: 25, height: 25, color: Colors.white,),
-                        alignment: PlaceholderAlignment.middle
+                      WidgetSpan(child: Icon(Icons.history_toggle_off, color: Colors.white,),
+                      alignment: PlaceholderAlignment.middle
                       ),
                       TextSpan(
-                        text: "  items in cart",
+                        text: "  purchase history",
                         style: TextStyle(
-                          height: 0,
+                          fontSize: 17,
                           color: Colors.white,
-                          fontWeight: FontWeight.w900,
-                          fontSize: 17
+                          fontWeight: FontWeight.w900
                         )
+
                       )
                     ]
                   )
                 ),
-              ],
-        )),
+              ),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    WidgetSpan(child: Icon(CupertinoIcons.settings, color: Colors.white,),
+                    alignment: PlaceholderAlignment.middle
+                    ),
+                    TextSpan(
+                      text: "  app settings",
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900
+                      )
+
+                    )
+                  ]
+                )
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
